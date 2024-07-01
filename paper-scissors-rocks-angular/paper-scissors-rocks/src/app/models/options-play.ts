@@ -1,5 +1,5 @@
-export enum OptionsPlay {
-  PAPER,
-  SCISSORS,
-  ROCK,
-}
+export type OptionsPlay = {
+  option: string;
+  imgUrl: string;
+  strength: number;
+};

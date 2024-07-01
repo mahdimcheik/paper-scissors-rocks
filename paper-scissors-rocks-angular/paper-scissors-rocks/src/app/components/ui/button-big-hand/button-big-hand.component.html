@@ -1,3 +1,5 @@
-<button class="hand">
-  <img [src]="imgUrl" alt="hand" width="150" height="200" />
-</button>
+<ng-container *ngIf="{ animate: playService.animate$ | async } as animate">
+  <button class="hand" [ngClass]="animate.animate ? 'animate' : ''">
+    <img [src]="imgUrl" alt="hand" width="150" height="200" />
+  </button>
+</ng-container>

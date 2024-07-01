@@ -1,0 +1,10 @@
+<div class="main" *ngIf="user | async as user">
+  <div class="score" *ngIf="{ score: playService.score$ | async } as score">
+    <h2>{{ user.pseudo | titlecase }}</h2>
+    score : {{ score.score }}
+  </div>
+  <div class="score" *ngIf="{ score: playService.scoreAI$ | async } as score">
+    <h2>Catalog</h2>
+    score : {{ score.score }}
+  </div>
+</div>

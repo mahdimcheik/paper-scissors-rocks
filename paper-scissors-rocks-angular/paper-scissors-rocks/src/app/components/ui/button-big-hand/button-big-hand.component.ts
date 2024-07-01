@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
+import { PlayService } from '../../../shared/services/play.service';
 
 @Component({
   selector: 'app-button-big-hand',
@@ -8,4 +9,7 @@ import { Component, Input } from '@angular/core';
 export class ButtonBigHandComponent {
   @Input() imgUrl!: string;
   @Input() DirectionRight!: boolean;
+  animate = false;
+
+  playService = inject(PlayService);
 }
