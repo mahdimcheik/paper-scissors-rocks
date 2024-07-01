@@ -1,6 +1,7 @@
 import { Component, DestroyRef, Input, OnInit, inject } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
 import { DashboardLink } from '../../models/dashboard-link';
+import { UserService } from '../../shared/services/user.service';
 
 @Component({
   selector: 'app-dashboard-links',
@@ -13,6 +14,7 @@ export class DashboardLinksComponent implements OnInit {
 
   router = inject(Router);
   destroyRef = inject(DestroyRef);
+  user = inject(UserService).connectedUser$;
 
   ngOnInit(): void {
     const fragments = this.router.url;

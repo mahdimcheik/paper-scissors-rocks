@@ -19,6 +19,7 @@ import {
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { errorHandlerInterceptor } from './interceptors/error-handler.interceptor';
+import { PlayComponent } from './pages/play/play.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { errorHandlerInterceptor } from './interceptors/error-handler.intercepto
     DashboardLinksComponent,
     ButtonComponent,
     ConnectionComponent,
+    PlayComponent,
   ],
   imports: [
     BrowserModule,
