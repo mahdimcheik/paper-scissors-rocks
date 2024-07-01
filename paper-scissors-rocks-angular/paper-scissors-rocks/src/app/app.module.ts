@@ -8,6 +8,8 @@ import { DialogModule } from 'primeng/dialog';
 import { DefaultButtonComponent } from './components/default-button/default-button.component';
 import { DashboardLinksComponent } from './components/dashboard-links/dashboard-links.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ButtonComponent } from './components/button/button.component';
+import { ConnectionComponent } from './pages/connection/connection.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     InscriptionComponent,
     DefaultButtonComponent,
     DashboardLinksComponent,
+    ButtonComponent,
+    ConnectionComponent,
   ],
   imports: [
     BrowserModule,

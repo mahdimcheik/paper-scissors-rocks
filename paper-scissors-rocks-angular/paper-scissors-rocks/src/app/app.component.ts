@@ -14,10 +14,17 @@ export class AppComponent {
 
   listLink: DashboardLink[] = [
     {
-      title: 'Jnscription',
+      title: 'Inscription',
       logoUrl: 'assets/svgs/tdb.svg',
       logoUrlActive: 'assets/svgs/dash-blanc.svg',
-      path: 'inscription',
+      path: '',
+      active: true,
+    },
+    {
+      title: 'Connexion',
+      logoUrl: 'assets/svgs/tdb.svg',
+      logoUrlActive: 'assets/svgs/dash-blanc.svg',
+      path: 'connection',
       active: true,
     },
     {
