@@ -1,33 +1,41 @@
 <div class="container-input">
-  <h1>Inscrivez-vous</h1>
+  <h1>Connectez-vous</h1>
   <div class="infos">
     <div class="infos">
       <div class="container-input">
         <label for="email">Votre email * </label>
-        <input type="text" id="email" name="email" placeholder="Votre email" />
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Votre email"
+          [(ngModel)]="credentials.email"
+        />
 
-        <div class="error" *ngIf="error">
-          <span> Un email unique est obligatoire</span>
-        </div>
-      </div>
-      <div class="infos">
-        <div class="container-input">
-          <label for="password">Votre mot de passe * </label>
-          <input
-            type="text"
-            id="password"
-            name="email"
-            placeholder="Votre email"
-          />
-
-          <div class="error" *ngIf="error">
-            <span> le mot de passe est obligatoire</span>
-          </div>
-        </div>
         <div class="infos">
-          <div class="btn-connexion">
-            <app-button text="Connection" [variant]="'pink'"></app-button>
-            <app-button text="Annuler" [variant]="'black'"></app-button>
+          <div class="container-input">
+            <label for="password">Votre mot de passe * </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Votre mot de passe"
+              [(ngModel)]="credentials.password"
+            />
+            <div class="infos">
+              <div class="btn-connexion">
+                <app-button
+                  text="Connection"
+                  [variant]="'pink'"
+                  (onSubmit)="login()"
+                ></app-button>
+                <app-button
+                  text="Annuler"
+                  [variant]="'black'"
+                  (onSubmit)="reset()"
+                ></app-button>
+              </div>
+            </div>
           </div>
         </div>
       </div>

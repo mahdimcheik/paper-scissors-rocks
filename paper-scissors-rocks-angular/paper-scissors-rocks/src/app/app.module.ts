@@ -10,6 +10,10 @@ import { DashboardLinksComponent } from './components/dashboard-links/dashboard-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonComponent } from './components/button/button.component';
 import { ConnectionComponent } from './pages/connection/connection.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -25,8 +29,11 @@ import { ConnectionComponent } from './pages/connection/connection.component';
     AppRoutingModule,
     DialogModule,
     BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    ToastModule,
   ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
