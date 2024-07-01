@@ -39,22 +39,7 @@
           [showText]="showNavbar"
           [listLink]="listLink"
         ></app-dashboard-links>
-        <button
-          class="burger"
-          (click)="toggleVisibility()"
-          [ngClass]="!showNavbar ? 'light' : 'dark'"
-        >
-          <img
-            [src]="
-              showNavbar
-                ? 'assets/svgs/left-arrow.svg'
-                : 'assets/svgs/right-arrow.svg'
-            "
-            alt=""
-            width="25"
-            height="25"
-          />
-        </button>
+
         <div
           class="logout"
           [ngStyle]="{ margin: showNavbar ? '0 0 0 20px' : '0 auto' }"
@@ -85,12 +70,14 @@
           <div class="btn-logout-container">
             <app-default-button
               (click)="modalVisible = false"
-              text="Annuler"
+              [text]="'Annuler'"
               type="submit"
+              [logoUrl]="'assets/svgs/stop.svg'"
             ></app-default-button>
             <app-default-button
               text="Déconnexion"
               type="submit"
+              [logoUrl]="'assets/svgs/logout.svg'"
               (click)="logout()"
             ></app-default-button>
           </div>
