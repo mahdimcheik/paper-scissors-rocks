@@ -6,7 +6,7 @@ import mysqlPromise from "mysql2/promise.js";
 
 const migrate = async () => {
   try {
-    const sql = fs.readFileSync("./src/clientDb/schema.sql", "utf8");
+    const sql = fs.readFileSync("./src/client/migrate.sql", "utf8");
 
     const database = await mysqlPromise.createConnection({
       host: DB_HOST,
