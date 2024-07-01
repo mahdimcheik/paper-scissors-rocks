@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "concurrently -c yellow,magenta \"npm:test-*\"",
+    "test-angular": "cd ./paper-scissors-rocks-angular/paper-scissors-rocks && ng s -o",
+    "test-express": "cd ./paper-scissors-rocks-espress && nodemon index.js"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
