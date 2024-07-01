@@ -20,6 +20,10 @@ import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { errorHandlerInterceptor } from './interceptors/error-handler.interceptor';
 import { PlayComponent } from './pages/play/play.component';
+import { TopPlayComponent } from './components/top-play/top-play.component';
+import { ButtonHandComponent } from './components/ui/button-hand/button-hand.component';
+import { MainPlayComponent } from './components/main-play/main-play.component';
+import { ButtonBigHandComponent } from './components/ui/button-big-hand/button-big-hand.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +34,10 @@ import { PlayComponent } from './pages/play/play.component';
     ButtonComponent,
     ConnectionComponent,
     PlayComponent,
+    TopPlayComponent,
+    ButtonHandComponent,
+    MainPlayComponent,
+    ButtonBigHandComponent,
   ],
   imports: [
     BrowserModule,
