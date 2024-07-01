@@ -26,7 +26,7 @@ export class InscriptionComponent implements OnInit {
   register() {
     if (
       this.registrationInfos.password === this.validationPassword &&
-      this.registrationInfos.pseudo.trim().length > 5
+      this.registrationInfos.pseudo.trim().length >= 5
     ) {
       this.userService
         .register(this.registrationInfos)

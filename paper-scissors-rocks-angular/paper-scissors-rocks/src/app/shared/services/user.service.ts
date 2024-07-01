@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { environment } from '../../../environments/environment.development';
 import { RegistrationInfos } from '../../models/registration-infos';
-import { Observable, tap } from 'rxjs';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { RegistrationResponse } from '../../models/registration-response';
 import { LoginResponse } from '../../models/login-response';
 
@@ -11,6 +11,7 @@ import { LoginResponse } from '../../models/login-response';
 })
 export class UserService {
   private http = inject(HttpClient);
+  connectedUser$ = new BehaviorSubject({} as LoginResponse);
 
   constructor() {}
 
@@ -22,6 +23,9 @@ export class UserService {
   login(infos: RegistrationInfos): Observable<LoginResponse> {
     return this.http
       .post<LoginResponse>(environment.BACK_API + '/login', infos)
-      .pipe(tap((res) => console.log(res)));
+      .pipe(tap((res) => this.connectedUser$.next(res)));
+  }
+  logout(): void {
+    this.connectedUser$.next({} as LoginResponse);
   }
 }

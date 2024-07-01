@@ -11,9 +11,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonComponent } from './components/button/button.component';
 import { ConnectionComponent } from './pages/connection/connection.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import {
+  HttpClientModule,
+  provideHttpClient,
+  withInterceptors,
+} from '@angular/common/http';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+import { errorHandlerInterceptor } from './interceptors/error-handler.interceptor';
 
 @NgModule({
   declarations: [
@@ -33,7 +38,10 @@ import { MessageService } from 'primeng/api';
     HttpClientModule,
     ToastModule,
   ],
-  providers: [MessageService],
+  providers: [
+    MessageService,
+    provideHttpClient(withInterceptors([errorHandlerInterceptor])),
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

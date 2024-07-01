@@ -33,7 +33,7 @@ export class ConnectionComponent {
       this.messageService.add({
         severity: 'error',
         summary: 'Attention! ',
-        detail: 'Non conformes !!!',
+        detail: 'Identifiants non conformes !!!',
       });
     }
   }

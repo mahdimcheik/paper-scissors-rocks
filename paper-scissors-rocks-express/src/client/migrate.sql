@@ -3,6 +3,6 @@ CREATE TABLE user (
     id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    nick_name VARCHAR(255) NOT NULL,
-    highest_score INT NOT NULL DEFAULT 0
+    pseudo VARCHAR(255) NOT NULL,
+    highestScore INT NOT NULL DEFAULT 0
 );

@@ -35,7 +35,7 @@ class MainManager {
       console.log("called manger");
       const hashedPassword = await MainManager.hashing(password);
       const [result] = await client.query(
-        `insert into user (email, password, nick_name) values (? , ? , ?)`,
+        `insert into user (email, password, pseudo) values (? , ? , ?)`,
         [email, hashedPassword, pseudo]
       );
       return result;
