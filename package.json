@@ -2,7 +2,12 @@
   "scripts": {
     "dev": "concurrently -c yellow,magenta \"npm:test-*\"",
     "test-angular": "cd ./paper-scissors-rocks-angular/paper-scissors-rocks && ng s -o",
-    "test-express": "cd ./paper-scissors-rocks-express && nodemon index.js"
+    "test-express": "cd ./paper-scissors-rocks-express && nodemon index.js",
+    "inst": "concurrently -c yellow,magenta \"npm:inst-*\"",
+    "inst-angular": "cd ./paper-scissors-rocks-angular/paper-scissors-rocks && npm i",
+    "inst-express": "cd ./paper-scissors-rocks-express && npm install",
+    "inst-main": "npm install",
+    "db": "cd ./paper-scissors-rocks-express && node migrate.js"
   },
   "dependencies": {
     "concurrently": "^8.2.2"
