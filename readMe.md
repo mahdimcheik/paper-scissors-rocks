@@ -14,12 +14,21 @@ Cette application est conçue en utilisant Node.js version 18 et Express.js pour
 
 1. Clonez le dépôt et accédez au répertoire :
 
-   ```bash
+   ```
    git clone git@github.com:mahdimcheik/paper-scissors-rocks.git
+   ```
+
+   ```
    cd paper-scissors-rocks
    ```
 
 2. Installez les dépendances :
+
+   ```bash
+   npm i
+   ```
+
+   Puis
 
    ```bash
    npm run inst
@@ -29,12 +38,12 @@ Cette application est conçue en utilisant Node.js version 18 et Express.js pour
 
 3. Configurez la base de données :
 
-   - Créez un fichier `.env` à la racine du dépôt. Ce fichier doit contenir les informations nécessaires à la connexion avec la base de données :
+   - Créez un fichier `.env` à la racine du dépôt du back-end (paper-scissors-rocks-express). Ce fichier doit contenir les informations nécessaires à la connexion avec la base de données :
 
    ```env
    DB_HOST=127.0.0.1
    DB_PORT=3306
-   DB_USER=mahdi
+   DB_USER=votreUsername
    DB_PASSWORD=votreMDP
    DB_NAME=NomBaseDD
    ```
