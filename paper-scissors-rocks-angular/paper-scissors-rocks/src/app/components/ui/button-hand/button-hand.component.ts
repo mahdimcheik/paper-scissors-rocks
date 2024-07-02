@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { OptionsPlay } from '../../../models/options-play';
 import { PlayService } from '../../../shared/services/play.service';
 import { delay, tap } from 'rxjs';
+import { UserService } from '../../../shared/services/user.service';
 
 @Component({
   selector: 'app-button-hand',
@@ -14,6 +15,7 @@ export class ButtonHandComponent {
   @Input() choice!: OptionsPlay;
 
   optionsPlay = inject(PlayService);
+  userService = inject(UserService);
 
   click() {
     this.onClick.emit();
@@ -77,7 +79,14 @@ export class ButtonHandComponent {
       }
       if (this.optionsPlay.rounds$.value < 5) {
         this.optionsPlay.rounds$.next(this.optionsPlay.rounds$.value + 1);
-      } else {
+      }
+      if (this.optionsPlay.rounds$.value === 5) {
+        this.userService
+          .updateScore(
+            this.userService.connectedUser$.value.email,
+            this.optionsPlay.score$.value
+          )
+          .subscribe();
       }
       this.optionsPlay.animate$.next(false);
     }, 3000);

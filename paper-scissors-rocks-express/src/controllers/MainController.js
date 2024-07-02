@@ -24,5 +24,19 @@ class MainController {
       res.status(401).json({ message: `Demande refusée: ${error.message}` });
     }
   }
+
+  async update(req, res) {
+    try {
+      const { email, score } = req.body;
+      console.log({ email, score });
+
+      const affectedRows = await MainManager.updateScore(email, score);
+      res.status(202).json({ affectedRows });
+    } catch (error) {
+      res
+        .status(401)
+        .json({ message: `Mise à jour refusée : ${error.message}` });
+    }
+  }
 }
 export default MainController;

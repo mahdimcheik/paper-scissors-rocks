@@ -28,4 +28,10 @@ export class UserService {
   logout(): void {
     this.connectedUser$.next({} as LoginResponse);
   }
+  updateScore(email: string, score: number): Observable<string> {
+    return this.http.post<string>(environment.BACK_API + '/update', {
+      email,
+      score,
+    });
+  }
 }
