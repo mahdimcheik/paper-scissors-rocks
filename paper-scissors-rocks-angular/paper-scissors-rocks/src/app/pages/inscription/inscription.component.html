@@ -1,0 +1,69 @@
+<div class="container-input">
+  <h1>Inscrivez-vous</h1>
+  <div class="infos">
+    <div class="container-input">
+      <label for="pseudo">Votre pseudo * </label>
+      <input
+        type="text"
+        id="pseudo"
+        name="pseudo"
+        placeholder="Votre pseudo"
+        [(ngModel)]="registrationInfos.pseudo"
+      />
+
+      <div class="infos">
+        <div class="container-input">
+          <label for="email">Votre email * </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Votre email"
+            [(ngModel)]="registrationInfos.email"
+          />
+
+          <div class="infos">
+            <div class="container-input">
+              <label for="password">Votre mot de passe * </label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Votre mot de passe"
+                [(ngModel)]="registrationInfos.password"
+              />
+
+              <div class="infos">
+                <div class="container-input">
+                  <label for="password">Confirmer votre mot de passe * </label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Confirmer votre Mot de passe"
+                    [(ngModel)]="validationPassword"
+                  />
+
+                  <div class="btn-connexion">
+                    <app-button
+                      text="Inscription"
+                      [variant]="'pink'"
+                      (onSubmit)="register()"
+                      type="submit"
+                    ></app-button>
+                    <app-button
+                      text="Annuler"
+                      [variant]="'black'"
+                      (onSubmit)="reset()"
+                      [type]="'button'"
+                    ></app-button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div *ngIf="{ animate: animate$ | async } as animate">
+  <div class="top" *ngIf="!animate.animate">
+    <h2>Faites votre choix</h2>
+    <div class="images">
+      <app-button-hand
+        imgUrl="assets/hands/rock.png"
+        [choice]="rock"
+      ></app-button-hand>
+      <app-button-hand
+        imgUrl="assets/hands/paper.png"
+        [choice]="paper"
+      ></app-button-hand>
+      <app-button-hand
+        imgUrl="assets/hands/scissors.png"
+        [choice]="scissors"
+      ></app-button-hand>
+    </div>
+  </div>
+</div>
