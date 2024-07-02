@@ -1,3 +1,4 @@
-<div class="main">
-  <app-player-details></app-player-details>
+<h2>Le ranking</h2>
+<div class="main" *ngFor="let user of users">
+  <app-player-details [userDetails]="user"></app-player-details>
 </div>

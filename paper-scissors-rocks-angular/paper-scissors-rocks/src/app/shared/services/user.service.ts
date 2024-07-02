@@ -37,4 +37,8 @@ export class UserService {
       score,
     });
   }
+
+  getRanking() {
+    return this.http.get<LoginResponse[]>(environment.BACK_API + '/ranking');
+  }
 }
