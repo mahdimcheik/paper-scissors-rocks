@@ -79,8 +79,7 @@ export class ButtonHandComponent {
       }
       if (this.optionsPlay.rounds$.value < 5) {
         this.optionsPlay.rounds$.next(this.optionsPlay.rounds$.value + 1);
-      }
-      if (this.optionsPlay.rounds$.value === 5) {
+      } else {
         this.userService
           .updateScore(
             this.userService.connectedUser$.value.email,
