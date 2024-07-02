@@ -1,6 +1,6 @@
 # Getting Started
 
-Cette application est conçue en utilisant Node.js version 21 et Express.js pour la partie back-end, et Angular 17 pour la partie front-end. MySQL est utilisé pour stocker les données dans la base de données. La librairie PrimeNG est utilisée pour le style.
+Cette application est conçue en utilisant Node.js version 18 et Express.js pour la partie back-end, et Angular 17 pour la partie front-end. MySQL est utilisé pour stocker les données dans la base de données. La librairie PrimeNG est utilisée pour le style.
 
 ## Installation
 
@@ -51,9 +51,9 @@ Cette application est conçue en utilisant Node.js version 21 et Express.js pour
 
 Pour lancer l'application, exécutez la commande suivante :
 
-    ```bash
-    npm run dev
-    ```
+```
+npm run dev
+```
 
 # Utilisation
 
