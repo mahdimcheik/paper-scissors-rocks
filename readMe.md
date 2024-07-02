@@ -7,7 +7,7 @@ Cette application est conçue en utilisant Node.js version 21 et Express.js pour
 ### Pré-requis
 
 - Angular 17
-- Node.js 21
+- Node.js 18
 - MySQL
 
 ### Étapes d'installation
