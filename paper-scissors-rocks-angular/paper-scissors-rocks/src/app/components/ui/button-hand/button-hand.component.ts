@@ -85,7 +85,11 @@ export class ButtonHandComponent {
             this.userService.connectedUser$.value.email,
             this.optionsPlay.score$.value
           )
-          .subscribe();
+          .subscribe(() => {
+            this.optionsPlay.rounds$.next(1);
+            this.optionsPlay.score$.next(0);
+            this.optionsPlay.scoreAI$.next(0);
+          });
       }
       this.optionsPlay.animate$.next(false);
     }, 3000);
