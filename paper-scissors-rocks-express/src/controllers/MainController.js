@@ -24,5 +24,33 @@ class MainController {
       res.status(401).json({ message: `Demande refusée: ${error.message}` });
     }
   }
+
+  async update(req, res) {
+    try {
+      const { email, score } = req.body;
+      console.log({ email, score });
+
+      const affectedRows = await MainManager.updateScore(email, score);
+      res.status(202).json({ affectedRows });
+    } catch (error) {
+      res
+        .status(401)
+        .json({ message: `Mise à jour refusée : ${error.message}` });
+    }
+  }
+
+  async browse(req, res) {
+    try {
+      const result = await MainManager.browse();
+      const ranked = result.map((user) => {
+        delete user.password;
+        return user;
+      });
+      console.log("res ", ranked);
+      res.status(200).json(ranked);
+    } catch (error) {
+      res.status(401).json({ message: "Demande refuséee" });
+    }
+  }
 }
 export default MainController;

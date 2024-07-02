@@ -44,9 +44,23 @@ class MainManager {
     }
   }
 
+  static async updateScore(email, score) {
+    try {
+      const [result] = await client.query(
+        `update  user set highestScore  = ? where email = ?`,
+        [score, email]
+      );
+      return result.affectedRows;
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  }
+
   static async browse() {
     try {
-      const [rows] = await client.query(`select * from user`);
+      const [rows] = await client.query(
+        `select * from user order by highestScore desc `
+      );
       return rows;
     } catch (error) {
       console.error(error.message);
