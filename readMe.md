@@ -1,6 +1,7 @@
 # Getting Started
 
 Cette application est conçue en utilisant Node.js version 18 et Express.js pour la partie back-end, et Angular 17 pour la partie front-end. MySQL est utilisé pour stocker les données dans la base de données. La librairie PrimeNG est utilisée pour le style.
+![alt text](image.png)
 
 ## Installation
 
