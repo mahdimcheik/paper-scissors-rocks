@@ -87,7 +87,7 @@ En cliquant sur l'une des images correspondantes, la partie se déclenche automa
 
 ## Déconnexion
 
-En cours, mais il suffit de rafraîchir la page pour retenter votre chance de casser votre record. Vous serez immédiatement redirigé vers la page d'inscription.
+En clicquand sur "vous déconnecter", mais aussi il suffit de rafraîchir la page pour retenter votre chance de casser votre record. Vous serez immédiatement redirigé vers la page d'inscription.
 
 # Ranking
 
@@ -96,4 +96,3 @@ La page ranking est dédiée aux résultats des meilleurs joueurs. Ils sont clas
 # Bugs and Issues
 
 1. L'application se réinitialise si on rafraîchit la page.
-2. La déconnexion ne fonctionne pas.

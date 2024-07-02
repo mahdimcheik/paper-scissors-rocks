@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { DashboardLink } from './models/dashboard-link';
+import { UserService } from './shared/services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -42,11 +43,13 @@ export class AppComponent {
       active: false,
     },
   ];
+  userService = inject(UserService);
 
   toggleVisibility() {
     this.showNavbar = !this.showNavbar;
   }
   logout() {
     this.modalVisible = false;
+    this.userService.logout();
   }
 }
