@@ -6,7 +6,7 @@
   <div class="center" *ngIf="playService.rounds$ | async as round">
     <h2>Round</h2>
     <p>{{ round }}</p>
-    <button (click)="restart()">Restart</button>
+    <button class="restart" (click)="restart()">Restart</button>
   </div>
   <div class="score" *ngIf="{ score: playService.scoreAI$ | async } as score">
     <h2>Catalog</h2>
