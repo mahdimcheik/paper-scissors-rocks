@@ -19,6 +19,7 @@ export class PlayService {
 
   score$ = new BehaviorSubject(0);
   scoreAI$ = new BehaviorSubject(0);
+  rounds$ = new BehaviorSubject(1);
 
   animate$ = new BehaviorSubject<boolean>(false);
   constructor() {}

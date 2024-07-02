@@ -10,4 +10,10 @@ import { PlayService } from '../../shared/services/play.service';
 export class ScoreComponent {
   user = inject(UserService).connectedUser$;
   playService = inject(PlayService);
+
+  restart() {
+    this.playService.rounds$.next(1);
+    this.playService.score$.next(0);
+    this.playService.scoreAI$.next(0);
+  }
 }

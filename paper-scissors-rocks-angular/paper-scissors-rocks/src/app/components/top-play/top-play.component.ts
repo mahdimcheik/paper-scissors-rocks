@@ -12,7 +12,7 @@ export class TopPlayComponent {
   paper = { option: 'paper', imgUrl: 'assets/hands/paper.png', strength: 3 };
   scissors = {
     option: 'scissors',
-    imgUrl: 'assets/hands/rock.png',
+    imgUrl: 'assets/hands/scissors.png',
     strength: 1,
   };
 
