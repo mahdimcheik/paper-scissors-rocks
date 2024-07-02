@@ -58,7 +58,9 @@ class MainManager {
 
   static async browse() {
     try {
-      const [rows] = await client.query(`select * from user`);
+      const [rows] = await client.query(
+        `select * from user order by highestScore desc `
+      );
       return rows;
     } catch (error) {
       console.error(error.message);

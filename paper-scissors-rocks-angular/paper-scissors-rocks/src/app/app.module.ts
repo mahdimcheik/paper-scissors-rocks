@@ -25,6 +25,8 @@ import { ButtonHandComponent } from './components/ui/button-hand/button-hand.com
 import { MainPlayComponent } from './components/main-play/main-play.component';
 import { ButtonBigHandComponent } from './components/ui/button-big-hand/button-big-hand.component';
 import { ScoreComponent } from './components/score/score.component';
+import { RankingComponent } from './pages/ranking/ranking.component';
+import { PlayerDetailsComponent } from './components/ui/player-details/player-details.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { ScoreComponent } from './components/score/score.component';
     MainPlayComponent,
     ButtonBigHandComponent,
     ScoreComponent,
+    RankingComponent,
+    PlayerDetailsComponent,
   ],
   imports: [
     BrowserModule,

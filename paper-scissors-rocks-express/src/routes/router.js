@@ -4,7 +4,7 @@ import MainController from "../controllers/MainController.js";
 const route = express.Router();
 const mainController = new MainController();
 
-// route.get("/users/:email", mainController.read);
+route.get("/ranking", mainController.browse);
 route.post("/add", mainController.add);
 route.post("/login", mainController.login);
 route.post("/update", mainController.update);
